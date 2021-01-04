@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE version SYSTEM "../../../lib/pkp/dtd/pluginVersion.dtd">
+
+<!--
+  * plugins/blocks/authorCountries/version.xml
+  *
+	* Copyright (c) 2019 Gunali Rezqi Mauludi
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Plugin version information.
+  -->
+<version>
+	<application>authorCountries</application>
+	<type>plugins.blocks</type>
+	<release>1.0.0.0</release>
+	<date>2019-12-13</date>
+	<lazy-load>1</lazy-load>
+	<class>AuthorCountriesBlockPlugin</class>
+</version>

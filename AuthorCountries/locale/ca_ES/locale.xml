@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/blocks/authorCountries/locale/ca_ES/locale.xml
+  *
+  * Copyright (c) 2019 Gunali Rezqi Mauludi
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the ca_ES (Català) locale.
+  *
+  -->
+
+<locale name="ca_ES" full_name="Català">
+	<message key="plugins.block.authorCountries.displayName">Bloc de commutació de llengües</message>
+	<message key="plugins.block.authorCountries.description">Aquest connector proporciona un commutador de llengües a la barra lateral.</message>
+</locale>

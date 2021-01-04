@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/blocks/authorCountries/locale/fr_CA/locale.xml
+  *
+  * Copyright (c) 2019 Gunali Rezqi Mauludi
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_French_(fr_CA)
+  * Localization strings.
+  -->
+
+<locale name = "fr_CA" full_name = "Français (Canada)">
+	<message key="plugins.block.authorCountries.displayName">Bloc de changement de langue</message>
+	<message key="plugins.block.authorCountries.description">Ce plugiciel fournit un mécanisme de changement de langue dans l’encadré latéral.</message>
+</locale>
