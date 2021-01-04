@@ -18,10 +18,6 @@
 	</setting>
 	<setting type="int">
 		<name>seq</name>
-		<value>4</value>
-	</setting>
-	<setting type="int">
-		<name>context</name>
-		<value>2</value><!-- BLOCK_CONTEXT_RIGHT_SIDEBAR -->
+		<value>5</value>
 	</setting>
 </plugin_settings>
