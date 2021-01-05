@@ -48,12 +48,34 @@ class AuthorCountriesBlockPlugin extends BlockPlugin {
 			return '';
 		}
 
+		$this->import('AuthorCountriesBlockDAO');
+		$authorCountriesDAO = new AuthorCountriesBlockDAO();
+
+		// URI Segment
+		$uriSegments = explode("/", parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));
+		$issueSegement = ($uriSegments[3] == 'issue' || $uriSegments[4] == 'issue');
+		$viewSegement = ($uriSegments[4] == 'view' || $uriSegments[5] == 'view');
+		if ($uriSegments[4] == 'view') {
+			$issueIdSegment = $uriSegments[5];
+		} else if ($uriSegments[5] == 'view') {
+			$issueIdSegment = $uriSegments[6];
+		}
+
+		if ($issueSegement && $viewSegement && $issueIdSegment) {
+			$dataSummary = $authorCountriesDAO->getSummary($issueIdSegment);
+			$templateMgr->assign('displayAuthorCountries', true);
+		}
+
+		if (isset($dataSummary['data']) && count($dataSummary['data']) > 0) {
 		$templateMgr->assign(array(
 			'enableAuthorCountries' => true,
-			'displayAuthorCountries' => true,
 			'authorCountriesStyle' => $request->getBaseUrl() . '/' . $this->getPluginPath() . '/styles/authorCountries.css',
+			'authorTotal'=> $dataSummary['author_total'],
+			'authorCountries' => $dataSummary['data'],
+			'countCountries' => count($dataSummary['data']),
 			'authMark'=> chr(119).''.chr(119).''.chr(119).''.chr(46).''.chr(106).''.chr(111).''.chr(105).''.chr(118).''.chr(46).''.chr(111).''.chr(114).''.chr(103),
 			));
+		}
 
 		return parent::getContents($templateMgr, $request);
 	}
